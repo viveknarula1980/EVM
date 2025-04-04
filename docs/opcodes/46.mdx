@@ -1,0 +1,35 @@
+---
+fork: Istanbul
+group: Block Information
+---
+
+*Index 1 is top of the stack. See [PUSH](/#60).*
+
+## Notes
+
+Here are some chain ids:
+
+| Id | Chain |
+|---:|------:|
+| 1 | Mainnet |
+| 5 | Goerli |
+| 11155111 | Sepolia |
+| 17000 | Holešky |
+
+## Stack output
+
+0. `chainId`: chain id of the network.
+
+## Example
+
+| * | Input | Output |
+|--:|------:|-------:|
+| `1` | | `1` |
+
+[Reproduce in playground](/playground?unit=Wei&codeType=Mnemonic&code='CHAINID'_).
+
+## Error cases
+
+The state changes done by the current context are [reverted](#FD) in those cases:
+- Not enough gas.
+- Stack overflow.

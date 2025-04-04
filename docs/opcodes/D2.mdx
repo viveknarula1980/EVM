@@ -1,0 +1,28 @@
+---
+fork: EOF
+group: Data Section Access
+---
+
+*Index 1 is top of the stack. See [PUSH](/#60).*
+
+## Stack output
+
+0. `size`: byte size of the data section.
+
+## Examples
+
+| Data Section |
+|---------|
+| `0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF` |
+
+| * | Input | Output |
+|--:|------:|-------:|
+| `1` | | `32` |
+
+*TBD: Reproduce in playground*
+
+## Error cases
+
+The state changes done by the current context are [reverted](#FD) in those cases:
+- Not enough gas.
+- Execution in a legacy (non-EOF) context.

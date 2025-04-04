@@ -1,0 +1,9 @@
+ethereum.js
+solcWorker.js
+public
+@/
+tailwind.config.js
+.eslintrc.js
+
+# monorepo
+ethereumjs-monorepo
