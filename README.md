@@ -1,74 +1,56 @@
-<p align="center">
-  <h1 align="center">EVM.Codes</h1>
-</p>
-<p align="center">
-  <strong><i>An interactive reference to Ethereum Virtual Machine Opcodes</i></strong>
-  <img width="1408" alt="screenshot" src="https://user-images.githubusercontent.com/5113/142245431-08ad9922-9115-43fd-9572-8b33cde75bb0.png">
-</p>
+# EVM Codes
 
-This is the source code that runs [evm.codes](https://evm.codes) web application. Below you will find the docs on how to contribute to the project and get it up and running locally for further development.
+ an interactive and educational reference tool designed to help developers understand and explore the Ethereum Virtual Machine (EVM) at the opcode level.
 
-evm.codes is brought to you by [Dune](https://dune.com/home), powered by open-source projects such as [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo), [SolcJS](https://github.com/ethereum/solc-js) and [many others](package.json).
+---
 
-## ⚙️ Installation
+## 🔍 Overview
 
-The app requires the following dependencies:
+EVM Codes provides:
 
-- [NodeJS](https://nodejs.org/) >= 20
-- [pnpm](https://pnpm.io/)
+- 🧠 A complete list of all EVM opcodes with:
+  - Descriptions
+  - Stack inputs/outputs
+  - Gas costs
+  - Example usage
+- 📦 A contract viewer to analyze bytecode and see what opcodes are used
+- 🧪 A step-by-step execution playground for experimenting with raw EVM code
+- 🎓 A tool for learning the internals of the Ethereum Virtual Machine
 
-## 👩‍💻 Local Development
+This project is especially useful for:
 
-For contributing to the project, you can quickly get the application running by following these steps:
+- Smart contract developers
+- Security auditors
+- Blockchain researchers
+- EVM tinkerers and enthusiasts
 
-Clone this repository:
+---
 
-    git clone git@github.com:duneanalytics/evm.codes.git
+## 🚫 What It Is Not
 
-Install the dependencies:
+This project is **not a wallet**. It does **not**:
 
-    pnpm install
+- Interact with real blockchain networks
+- Require or use your private key
+- Connect to MetaMask or any Web3 provider
 
-Specify the environment variables if you want to run the contract viewer in `.env.local`
+EVM Codes is **strictly for viewing and simulating** EVM bytecode locally in your browser.
 
-    APIKEY_ETHERSCAN=
+---
 
-Start up the app and see it running at <http://localhost:3000>
 
-    pnpm dev
+## 🛠 Tech Stack
 
-## 🚀 Deploying
+- Vue.js
+- TypeScript
+- Vite
+- Custom EVM interpreter and visualization logic
 
-Deployments are handled automatically by [Vercel](https://vercel.com/), as soon as your PR is merged to `main`.
+---
 
-## 🤗 Contributing
+## 📦 Getting Started (Local Setup)
 
-evm.codes is built and maintained by a small team, so we would definitely love your help to fix bugs, add new features and improvements, or update EVM [reference docs](docs/opcodes).
-
-Before you submit a pull request, please make sure there isn't an existing [GitHub issue](https://github.com/duneanalytics/evm.codes/issues). If there isn't, create one first to discuss the best way to approach it and also get some feedback from the team.
-
-Once you are about to submit a pull request, prefix the name with either `chore:` (small improvements and regular maintenance), `fix:` (bugs and hot fixes), or `feat:` (new features) to help us quickly look up the type of the issue from the Git history.
-
-### Coding conventions
-
-The project is already pre-configured with [Eslint](.eslintrc.js), [TypeScript](tsconfig.json), and [Prettier](.prettierrc). Here are some useful commands you can run to ensure your changes follow the project's coding conventions:
-
-Check for any linting issues and fix:
-
-    pnpm lint --fix
-
-Check for any TypeScript issues:
-
-    pnpm typecheck
-
-Sort the `package.json`:
-
-    pnpm lint:package
-
-## Architecture
-
-If you would like to contribute, make sure to check the [architecture document](docs/ARCHITECTURE.md) to learn about the code structure, and how the app is built.
-
-## License
-
-[MIT](LICENSE)
+```bash
+cd evm.codes
+pnpm install
+pnpm run dev
